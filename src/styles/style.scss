@@ -1,3 +1,12 @@
-body {
-	background: #fc0;
-}
+@import '~normalize.css';
+
+@import 'default/vars';
+@import 'default/fonts';
+@import 'default/default';
+
+@import 'libs/hide';
+
+@import 'blocks/circle-btn';
+@import 'blocks/top-nav';
+@import 'blocks/header';
+@import 'blocks/overlay';

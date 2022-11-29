@@ -4,9 +4,84 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Kata 1.6 Webcore task</title>
 </head>
 <body>
+
+	<header class="header">
+
+		<div class="header__top">
+
+			<div class="header__burger-wrapper">
+				<button class="circle-btn circle-btn--burger header__burger" id="header-burger"></button>
+			</div>
 	
+			<a href="" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+	
+			<div 
+				class="
+					header__contact-buttons 
+					header__contact-buttons--tablet
+					hide-mobile 
+					hide-desktop
+				"
+			>
+				<a href="" class="circle-btn circle-btn--phone"></a>
+				<a href="" class="circle-btn circle-btn--message"></a>
+				<a href="" class="circle-btn circle-btn--profile"></a>
+			</div>
+	
+			<div class="header__actions">
+				<a class="header__action">
+					<span class="header__action-text">Оставить заявку</span>
+					<span class="circle-btn circle-btn--service header__action-icon"></span>
+				</a>
+				<a class="header__action">
+					<span class="header__action-text">Статус ремонта</span>
+					<span class="circle-btn circle-btn--service-info header__action-icon"></span>
+				</a>
+			</div>
+
+		</div>
+
+		<aside class="header__nav-wrapper" id="toggled-nav">
+
+			<a href="" class="circle-btn circle-btn--search header__search"></a>
+
+			<nav class="top-nav">
+				<ul class="top-nav__list">
+					<li class="top-nav__item"><a href="" class="top-nav__link">Ремонт техники</a></li>
+					<li class="top-nav__item top-nav__item--active"><a href="" class="top-nav__link">Услуги и сервисы</a></li>
+					<li class="top-nav__item"><a href="" class="top-nav__link">Корпоративным клиентам</a></li>
+					<li class="top-nav__item"><a href="" class="top-nav__link">Продавцам техники</a></li>
+					<li class="top-nav__item"><a href="" class="top-nav__link">Партнерам</a></li>
+					<li class="top-nav__item"><a href="" class="top-nav__link">Производителям</a></li>
+					<li class="top-nav__item"><a href="" class="top-nav__link">Наши сервисные центры</a></li>
+					<li class="top-nav__item"><a href="" class="top-nav__link">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header__contact-buttons">
+				<a href="" class="circle-btn circle-btn--phone"></a>
+				<a href="" class="circle-btn circle-btn--message"></a>
+				<a href="" class="circle-btn circle-btn--profile"></a>
+			</div>
+			<div class="header__contacts">
+				<a href="" class="header__email">mail@cps.com</a>
+				<a href="" class="header__phone">8 800 890 8900</a>
+				
+				<div class="header__language-selector">
+					<a href="" class="header__language-link">RU</a>
+					<a href="" class="header__language-link">EN</a>
+					<a href="" class="header__language-link">CH</a>
+				</div>
+			</div>
+		</aside>
+
+	</header>
+
+	<div class="overlay overlay--hide"></div>
+
 </body>
 </html>
