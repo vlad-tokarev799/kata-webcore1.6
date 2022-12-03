@@ -1,0 +1,72 @@
+.show-more {
+	position: relative;
+
+  &--init {
+    margin-bottom: 50px;
+  }
+
+	&__content {
+		overflow: hidden;
+		transition: height .2s ease-in-out;
+
+		&--hidden {
+			height: 90px !important;
+
+      @media (min-width: 480px) {
+        height: 160px !important;
+      }
+		}
+	}
+
+  &--repair > &__content--hidden {
+    height: 200px !important;
+  }
+
+	&__button {
+		position: absolute;
+		bottom: -40px;
+		left: 0;
+
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		/* identical to box height, or 150% */
+
+		letter-spacing: -0.2px;
+
+		color: #1B1C21;
+
+		background-color: transparent;
+
+		border: none;
+
+		display: flex;
+			gap: 3px;
+
+    @media (min-width: 580px) {
+      bottom: -35px;
+    }
+
+		&:before {
+			content: '';
+
+			display: block;
+			width: 24px;
+			height: 24px;
+
+			background-image: url('../img/icons/arrows-down.svg');
+			background-position: center center;
+			background-repeat: no-repeat;
+
+			transition: transform .2s;
+		}
+
+		&--open {
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+
+	}
+}

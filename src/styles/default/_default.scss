@@ -2,3 +2,9 @@ html {
 	font-family: 'TTLakes', sans-serif;
 	font-weight: 400;
 }
+
+body {
+	@media (min-width: 1366px) {
+		display: flex;
+	}
+}
