@@ -24,18 +24,16 @@
 
 	&__button {
 		position: absolute;
-		bottom: -40px;
-		left: 0;
+      bottom: -40px;
+      left: 0;
 
 		font-style: normal;
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 24px;
-		/* identical to box height, or 150% */
-
 		letter-spacing: -0.2px;
 
-		color: #1B1C21;
+		color: $dark-text;
 
 		background-color: transparent;
 
@@ -52,8 +50,8 @@
 			content: '';
 
 			display: block;
-			width: 24px;
-			height: 24px;
+        width: 24px;
+        height: 24px;
 
 			background-image: url('../img/icons/arrows-down.svg');
 			background-position: center center;
@@ -67,6 +65,5 @@
 				transform: rotate(180deg);
 			}
 		}
-
 	}
 }

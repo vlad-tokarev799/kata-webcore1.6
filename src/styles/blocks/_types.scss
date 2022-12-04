@@ -41,7 +41,7 @@
   }
 
   &__slide {
-    background: #FFFFFF;
+    background: $white;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
 
@@ -69,7 +69,7 @@
     width: 40px;
     height: 40px;
 
-    border: 2px solid #FF3E79;
+    border: 2px solid $accentColor;
     border-radius: 50%;
 
     background-image: url('../img/icons/left-chevron.svg');

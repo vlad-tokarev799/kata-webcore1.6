@@ -5,11 +5,9 @@
 	font-size: 28px;
 	line-height: 40px;
 	letter-spacing: -0.6px;
-	color: #1B1C21;
+	color: $dark-text;
 
 	padding-left: 16px;
-
-	// color: #fc0;
 
 	margin: 0;
 
@@ -24,9 +22,10 @@
 	&:before {
 		content: '';
 		display: block;
-		width: 4px;
-		height: 40px;
-		background: #41F6D7;
+      width: 4px;
+      height: 40px;
+
+		background: $cyan;
 
 		position: absolute;
 			left: 0;

@@ -1,5 +1,4 @@
 .top-nav {
-	// display: none;
 
 	&__list {
 		list-style: none;
@@ -24,14 +23,14 @@
 
 		position: relative;
 
-		color: #1B1C21;
+		color: $dark-text;
 
 		&:before {
 			content: '';
 			display: block;
 			width: 4px;
 			height: 32px;
-			background: #41F6D7;
+			background: $cyan;
 
 			position: absolute;
 			left: 0;
@@ -51,7 +50,7 @@
 		}
 
 		&--active, &:hover {
-			color: #7e7e87;
+			color: $grey-text;
 		}
 	}
 

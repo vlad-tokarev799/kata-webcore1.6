@@ -16,46 +16,32 @@ initPopupsBtns()
 
 window.addEventListener('load', initHiddenText)
 
+const getSwiperConfig = (prefix) => ({
+  slidesPerView: 'auto',
+  pagination: {
+    el: `.${prefix}__pagination`,
+    type: 'bullets',
+    bulletClass: 'pagination__bullet',
+    bulletActiveClass: 'pagination__bullet--active'
+  },
+  spaceBetween: 16
+})
+
 if (windowWidth < 580) {
   if (document.querySelector('.repair__slider')) {
-    const brandsSwiper = new Swiper('.repair__slider', {
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.repair__pagination',
-        type: 'bullets',
-        bulletClass: 'repair__bullet',
-        bulletActiveClass: 'repair__bullet--active'
-      },
-      spaceBetween: 16
-    })
+    const brandsSwiper = new Swiper(
+      '.repair__slider',
+      getSwiperConfig('repair')
+    )
   }
 
   if (document.querySelector('.types__slider')) {
-    const typesSwiper = new Swiper('.types__slider', {
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.types__pagination',
-        type: 'bullets',
-        bulletClass: 'types__bullet',
-        bulletActiveClass: 'types__bullet--active'
-      },
-      spaceBetween: 16
-    })
+    const typesSwiper = new Swiper('.types__slider', getSwiperConfig('types'))
   }
 }
 
 if (windowWidth < 768) {
   if (document.querySelector('.price__slider')) {
-    const priceSlider = new Swiper('.price__slider', {
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.price__pagination',
-        type: 'bullets',
-        bulletClass: 'price__bullet',
-        bulletActiveClass: 'price__bullet--active'
-      },
-      spaceBetween: 16,
-      height: 'auto'
-    })
+    const priceSlider = new Swiper('.price__slider', getSwiperConfig('price'))
   }
 }

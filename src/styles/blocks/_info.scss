@@ -15,13 +15,12 @@
 
 	&__links-slider {
 		width: 100%;
-
 		overflow-x: auto;
 	}
 
 	&__links {
 		display: flex;
-		gap: 5px;
+		  gap: 5px;
 
 		@media (min-width: 900px) {
 			flex-wrap: wrap;
@@ -37,7 +36,7 @@
 
 		letter-spacing: -0.2px;
 
-		color: #7E7E82;
+		color: $grey-text;
 
 		text-decoration: none;
 		border-radius: 6px;
@@ -47,8 +46,8 @@
 		border: 2px solid transparent;
 
 		&--active {
-			background: #fff;
-			border: 2px solid #B8FFEC;
+			background: $white;
+			border: 2px solid $light-cyan;
 		}
 	}
 
@@ -61,8 +60,8 @@
 
     @media (min-width: 580px) {
       display: flex;
-      align-items: flex-start;
-      gap: 20px;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     @media (max-width: 768px) {
@@ -81,9 +80,9 @@
 
   &__image-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-shrink: 0;
+      justify-content: center;
+      align-items: flex-start;
+      flex-shrink: 0;
 
     @media (min-width: 580px) {
       width: 360px;
@@ -118,11 +117,9 @@
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 18px;
-		/* or 129% */
-
 		letter-spacing: 0.2px;
 
-		color: #1B1C21;
+		color: $dark-text;
 
 		margin: 0;
 
