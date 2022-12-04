@@ -4,8 +4,10 @@
 	width: 100%;
 	box-sizing: border-box;
 
+  grid-area: main;
+
 	@media (min-width: 1366px) {
-		margin-left: 8px;
+		// margin-left: 8px;
 		padding-top: 17px;
 
     // height: 100vh;

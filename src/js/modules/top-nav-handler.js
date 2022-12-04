@@ -9,6 +9,7 @@ export function initTopNav() {
 
     toggledNav.classList.toggle('header__nav-wrapper--open')
     overlay.classList.toggle('overlay--hide')
+    document.body.classList.toggle('block-scroll')
   })
 
   overlay.addEventListener('click', function () {
@@ -17,5 +18,6 @@ export function initTopNav() {
 
     toggledNav.classList.remove('header__nav-wrapper--open')
     overlay.classList.add('overlay--hide')
+    document.body.classList.remove('block-scroll')
   })
 }

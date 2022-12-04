@@ -4,7 +4,21 @@ html {
 }
 
 body {
+
+  &.block-scroll {
+    overflow: hidden;
+  }
+
 	@media (min-width: 1366px) {
-		display: flex;
+    width: 100vw;
+    overflow-x: hidden;
+
+		display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      'sidenav main'
+      'sidenav footer'
+    ;
+    gap: 8px;
 	}
 }

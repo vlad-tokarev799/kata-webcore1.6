@@ -1,5 +1,7 @@
 
 .header {
+  grid-area: sidenav;
+
 	&__top {
 
 		display: flex;
@@ -27,9 +29,11 @@
 			top: 0;
 			right: 0;
 			left: 0;
-			z-index: 1;
+			z-index: 20;
 
 			pointer-events: none;
+
+      justify-content: flex-end;
 		}
 
 	}
@@ -69,8 +73,12 @@
 	}
 
 	&__logo {
-		position: relative;
-		z-index: 12;
+    @media (min-width: 1366px) {
+      position: fixed;
+      z-index: 12;
+      left: 20px;
+      top: 30px;
+    }
 	}
 
 	&__actions {
@@ -103,6 +111,10 @@
 			height: 32px;
 
 			background-color: #eaeaea;
+
+      @media (min-width: 1366px) {
+        display: none;
+      }
 		}
 	}
 
@@ -151,7 +163,10 @@
 		}
 
 		@media (min-width: 1366px) {
-			position: static;
+			position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
 			opacity: 1;
 			transform: translateX(0);
 			order: -1;

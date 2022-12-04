@@ -34,11 +34,11 @@
 			</div>
 
 			<div class="header__actions">
-				<a class="header__action">
+				<a class="header__action" data-modal="#modal_get-call">
 					<span class="header__action-text">Оставить заявку</span>
 					<span class="circle-btn circle-btn--service header__action-icon"></span>
 				</a>
-				<a class="header__action">
+				<a class="header__action" data-modal="#modal_feedback">
 					<span class="header__action-text">Статус ремонта</span>
 					<span class="circle-btn circle-btn--service-info header__action-icon"></span>
 				</a>
@@ -267,21 +267,179 @@
       </div>
     </section>
 
-    <section class="prices">
+    <section class="price">
       <div class="container">
-        <h2 class="section-title prices__title">Цены на услуги</h2>
+        <h2 class="section-title price__title">Цены на услуги</h2>
 
         <div class="price__slider swiper">
-          <div class="price__slider-wrapper swiper-wrapper">
-            <div class="prices__slide"></div>
+          <div class="price__table swiper-wrapper">
+
+            <div class="price-cell swiper-slide">
+              <div class="price-cell__item price-cell__service">
+                <p class="price-cell__name">Ремонтные услуги</p>
+                <p class="price-cell__value">Диагностика</p>
+              </div>
+              <div class="price-cell__item price-cell__price">
+                <p class="price-cell__name">Цена</p>
+                <p class="price-cell__value">Бесплатно</p>
+              </div>
+              <div class="price-cell__item price-cell__time">
+                <p class="price-cell__name">Срок</p>
+                <p class="price-cell__value">30 мин</p>
+                <button class="btn price-cell__btn" data-modal="#modal_get-call">Заказать</button>
+              </div>
+            </div>
+
+            <div class="price-cell swiper-slide">
+              <div class="price-cell__item price-cell__service">
+                <p class="price-cell__name">Ремонтные услуги</p>
+                <p class="price-cell__value">Замена дисплея</p>
+              </div>
+              <div class="price-cell__item price-cell__price">
+                <p class="price-cell__name">Цена</p>
+                <p class="price-cell__value">1 000 ₽</p>
+              </div>
+              <div class="price-cell__item price-cell__time">
+                <p class="price-cell__name">Срок</p>
+                <p class="price-cell__value">30-120 мин</p>
+                <button class="btn price-cell__btn" data-modal="#modal_get-call">Заказать</button>
+              </div>
+            </div>
+
+            <div class="price-cell swiper-slide">
+              <div class="price-cell__item price-cell__service">
+                <p class="price-cell__name">Ремонтные услуги</p>
+                <p class="price-cell__value">Замена полифонического динамика</p>
+              </div>
+              <div class="price-cell__item price-cell__price">
+                <p class="price-cell__name">Цена</p>
+                <p class="price-cell__value">1 000 ₽</p>
+              </div>
+              <div class="price-cell__item price-cell__time">
+                <p class="price-cell__name">Срок</p>
+                <p class="price-cell__value">30-120 мин</p>
+                <button class="btn price-cell__btn" data-modal="#modal_get-call">Заказать</button>
+              </div>
+            </div>
+
+            <div class="price-cell swiper-slide">
+              <div class="price-cell__item price-cell__service">
+                <p class="price-cell__name">Ремонтные услуги</p>
+                <p class="price-cell__value">Тестирование с выдачей технического заключения</p>
+              </div>
+              <div class="price-cell__item price-cell__price">
+                <p class="price-cell__name">Цена</p>
+                <p class="price-cell__value">1 000 ₽</p>
+              </div>
+              <div class="price-cell__item price-cell__time">
+                <p class="price-cell__name">Срок</p>
+                <p class="price-cell__value">30-120 мин</p>
+                <button class="btn price-cell__btn" data-modal="#modal_get-call">Заказать</button>
+              </div>
+            </div>
+
+            <div class="price-cell swiper-slide">
+              <div class="price-cell__item price-cell__service">
+                <p class="price-cell__name">Ремонтные услуги</p>
+                <p class="price-cell__value">Замена программного обеспечения</p>
+              </div>
+              <div class="price-cell__item price-cell__price">
+                <p class="price-cell__name">Цена</p>
+                <p class="price-cell__value">1 000 ₽</p>
+              </div>
+              <div class="price-cell__item price-cell__time">
+                <p class="price-cell__name">Срок</p>
+                <p class="price-cell__value">30-120 мин</p>
+                <button class="btn price-cell__btn" data-modal="#modal_get-call">Заказать</button>
+              </div>
+            </div>
+
           </div>
         </div>
+
+        <div class="price__pagination"></div>
+
+        <p class="price__pgh">
+          Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+        </p>
+
+        <button class="price__get-call-btn" data-modal="#modal_feedback">Получить коммерческое предложение</button>
+
       </div>
     </section>
 
 	</main>
 
+  <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__item footer__item--info">© 2019 CPS <br> Разработано командой Apesong</p>
+        <a href="" class="footer__item footer__item--nav-link">Политика конфиденциальности</a>
+        <p class="footer__item footer__item--copy">Информация, размещенная на данной странице, не является публичной офертой</p>
+      </div>
+  </footer>
+
 	<div class="overlay overlay--hide"></div>
+
+  <div class="modal" id="modal_feedback">
+    <button class="circle-btn circle-btn--close modal__close-btn"></button>
+    <h3 class="title title--small modal__title">Обратная связь</h3>
+
+    <form action="" class="modal__form">
+      <input
+        type="text"
+        class="modal__input"
+        name="name"
+        placeholder="Имя"
+      >
+      <input
+        type="tel"
+        class="modal__input"
+        name="tel"
+        placeholder="Телефон"
+      >
+
+      <input
+        type="email"
+        class="modal__input"
+        name="email"
+        placeholder="Электронная почта"
+      >
+
+      <textarea
+        type="message"
+        class="modal__input modal__input--textarea"
+        name="message"
+        placeholder="Сообщение"
+      ></textarea>
+
+      <p class="modal__text">
+        Нажимая “отправить”, вы даете согласие на <a href="" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="" class="modal__link">политикой конфиденциальности</a>
+      </p>
+
+      <button type="submit" class="btn modal__btn">ОТПРАВИТЬ</button>
+    </form>
+  </div>
+
+  <div class="modal" id="modal_get-call">
+    <button class="circle-btn circle-btn--close modal__close-btn"></button>
+    <h3 class="title title--small modal__title">Заказать звонок</h3>
+
+    <form action="" class="modal__form">
+
+      <input
+        type="tel"
+        class="modal__input"
+        name="tel"
+        placeholder="Телефон"
+      >
+
+      <p class="modal__text">
+        Нажимая “отправить”, вы даете согласие на <a href="" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="" class="modal__link">политикой конфиденциальности</a>
+      </p>
+
+      <button type="submit" class="btn modal__btn">ОТПРАВИТЬ</button>
+    </form>
+  </div>
 
 </body>
 </html>

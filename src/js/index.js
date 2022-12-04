@@ -9,8 +9,10 @@ import '../styles/style.scss'
 
 import { initTopNav } from './modules/top-nav-handler'
 import { initHiddenText } from './modules/show-more'
+import { initPopupsBtns } from './modules/open-popup'
 
 initTopNav()
+initPopupsBtns()
 
 window.addEventListener('load', initHiddenText)
 
@@ -29,7 +31,7 @@ if (windowWidth < 580) {
   }
 
   if (document.querySelector('.types__slider')) {
-    const brandsSwiper = new Swiper('.types__slider', {
+    const typesSwiper = new Swiper('.types__slider', {
       slidesPerView: 'auto',
       pagination: {
         el: '.types__pagination',
@@ -38,6 +40,22 @@ if (windowWidth < 580) {
         bulletActiveClass: 'types__bullet--active'
       },
       spaceBetween: 16
+    })
+  }
+}
+
+if (windowWidth < 768) {
+  if (document.querySelector('.price__slider')) {
+    const priceSlider = new Swiper('.price__slider', {
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.price__pagination',
+        type: 'bullets',
+        bulletClass: 'price__bullet',
+        bulletActiveClass: 'price__bullet--active'
+      },
+      spaceBetween: 16,
+      height: 'auto'
     })
   }
 }

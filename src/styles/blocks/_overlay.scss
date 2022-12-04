@@ -12,6 +12,10 @@
 
 	transition: opacity 0.2s;
 
+  &--modal {
+    z-index: 20;
+  }
+
 	&--hide {
 		opacity: 0;
 		pointer-events: none;

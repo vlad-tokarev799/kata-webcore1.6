@@ -1,3 +1,189 @@
-.prices {
+.price {
   padding: 20px 0;
+
+  @media (min-width: 760px) {
+    padding: 35px 0;
+  }
+
+  @media (min-width: 900px) {
+    padding: 20px 0;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__pagination {
+    display: flex;
+      justify-content: center;
+      gap: 12px;
+
+    margin-top: 12px;
+
+    @media (min-width: 760px) {
+      display: none;
+    }
+  }
+
+  &__bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #DDDDDD;
+
+    &--active {
+      background: #B5B6BC;
+    }
+  }
+
+  &__table {
+    align-items: stretch;
+
+    @media (min-width: 760px) {
+      display: table;
+      // flex-direction: column;
+    }
+  }
+
+  &__pgh {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+
+    color: #1B1C21;
+    // color: #fc0;
+
+    margin: 18px 0 16px;
+
+    @media (min-width: 580px) {
+      max-width: 420px;
+    }
+
+    @media (min-width: 900px) {
+      margin: 25px 0 15px;
+    }
+  }
+
+  &__get-call-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: -0.2px;
+
+    color: #1B1C21;
+
+    text-align: left;
+
+    background-color: transparent;
+    border: none;
+    padding: 0px 0px;
+
+    &:after {
+      content: '';
+      background-image: url('../img/icons/right-red-chevron.svg');
+
+      display: inline-block;
+      width: 24px;
+      height: 12px;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+.price-cell {
+  max-width: 260px;
+  padding: 8px;
+  // display: flex;
+  // flex-direction: column;
+
+  @media (min-width: 760px) {
+    width: 100%;
+    max-width: unset;
+    padding: 0 15px;
+
+    border-bottom: 1px solid #EAEAEA;
+
+    display: grid;
+    grid-template-columns: 1fr 95px 250px;
+
+    &:first-child {
+      .price-cell__name {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    padding: 0 20px;
+    grid-template-columns: 1fr 225px 370px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+
+    margin: 0;
+
+    @media (min-width: 760px) {
+      display: none;
+      padding: 10px 0 10px;
+    }
+  }
+
+  &__value {
+    margin: 0;
+    padding: 5px 0 15px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* or 129% */
+
+    letter-spacing: 0.2px;
+
+    color: #1B1C21;
+
+    @media (min-width: 760px) {
+      padding: 24px 0;
+    }
+  }
+
+  &__item {
+    @media (min-width: 760px) {
+      padding-right: 24px;
+      flex-grow: 1;
+    }
+  }
+
+  &__service {
+    flex-grow: 1;
+  }
+
+  &__time {
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+      right: 30px;
+      bottom: 10px;
+
+    @media (min-width: 760px) {
+      right: 30px;
+      bottom: 17px;
+    }
+
+    @media (min-width: 900px) {
+      right: 55px;
+    }
+  }
 }
