@@ -45,9 +45,19 @@
 
 		border: 2px solid transparent;
 
+    transition: border-color .2s ease-in-out;
+
+    &:hover {
+      border-color: $placeholder-color;
+    }
+
 		&--active {
 			background: $white;
-			border: 2px solid $light-cyan;
+			border-color: $light-cyan;
+
+      &:hover {
+        border-color: $light-cyan;
+      }
 		}
 	}
 

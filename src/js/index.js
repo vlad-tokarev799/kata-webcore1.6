@@ -13,7 +13,6 @@ import { initPopupsBtns } from './modules/open-popup'
 
 initTopNav()
 initPopupsBtns()
-
 window.addEventListener('load', initHiddenText)
 
 const getSwiperConfig = (prefix) => ({

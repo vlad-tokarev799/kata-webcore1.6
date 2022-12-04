@@ -17,4 +17,12 @@
   background-image: url('../img/icons/right-chevron.svg');
   background-repeat: no-repeat;
   background-position: right 20px center;
+
+  cursor: pointer;
+
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: darken($accentColor, 20%);
+  }
 }

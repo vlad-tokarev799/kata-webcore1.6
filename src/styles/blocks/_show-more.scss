@@ -42,6 +42,8 @@
 		display: flex;
 			gap: 3px;
 
+    cursor: pointer;
+
     @media (min-width: 580px) {
       bottom: -35px;
     }

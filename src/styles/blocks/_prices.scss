@@ -53,6 +53,8 @@
     border: none;
     padding: 0;
 
+    cursor: pointer;
+
     &:after {
       content: '';
       background-image: url('../img/icons/right-red-chevron.svg');

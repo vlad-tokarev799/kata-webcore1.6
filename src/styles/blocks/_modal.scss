@@ -16,17 +16,18 @@
 
   transition: .2s ease-in-out;
 
-  &--open {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
   @media (min-width: 580px) {
     max-width: 440px;
     left: auto;
     padding-top: 40px;
 
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    transform: translateX(130%);
+  }
+
+  &--open {
+    transform: translateX(0);
+    opacity: 1;
   }
 
   &__close-btn {

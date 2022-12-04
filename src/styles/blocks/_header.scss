@@ -21,7 +21,7 @@
 		}
 
 		@media (min-width: 1366px) {
-			justify-content: space-between;
+			justify-content: flex-end;
 
 			position: absolute;
         top: 0;
@@ -119,6 +119,8 @@
       gap: 10px;
 
 		pointer-events: all;
+
+    cursor: pointer;
 	}
 
 	&__action-text {
@@ -233,6 +235,10 @@
 		text-decoration: none;
 
 		margin-bottom: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
 	}
 
 	&__phone {
@@ -248,6 +254,12 @@
 
 		margin-bottom: 10px;
 
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: lighten($dark-text, 40%);
+    }
+
 		@media (min-width: 480px) {
 			margin-bottom: 41px;
 		}
@@ -262,5 +274,11 @@
 	&__language-link {
 		color: $dark-text;
 		text-decoration: none;
+    font-weight: 500;
+    transition: color .2s ease-in-out;
+
+    &:hover, &--active {
+      color: $grey-text;
+    }
 	}
 }
