@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -50,11 +51,11 @@ module.exports = {
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         type: 'asset/resource'
-      },
-      {
-        test: /\.(svg|png|jpg|jpeg|webp)/,
-        type: 'asset/resource'
       }
+      // {
+      //   test: /\.(svg|png|jpg|jpeg|webp)/,
+      //   type: 'asset/resource'
+      // }
     ]
   },
   plugins: [
@@ -63,6 +64,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'img', to: 'img' }]
     })
   ]
 }
