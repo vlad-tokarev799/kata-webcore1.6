@@ -50,12 +50,22 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: () => {
+            return 'fonts/[name][ext]'
+          }
+        }
+      },
+      {
+        test: /\.(svg|png|jpg|jpeg|webp)/,
+        type: 'asset/resource',
+        generator: {
+          filename: () => {
+            return 'img/[name][ext]'
+          }
+        }
       }
-      // {
-      //   test: /\.(svg|png|jpg|jpeg|webp)/,
-      //   type: 'asset/resource'
-      // }
     ]
   },
   plugins: [
@@ -63,7 +73,7 @@ module.exports = {
       template: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'css/style.css'
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: 'img', to: 'img' }]
